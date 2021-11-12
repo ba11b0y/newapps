@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Flavor Test</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="flavor">Flavor</string>
+    <string name="trending_courses">Trending Courses</string>
+</resources>

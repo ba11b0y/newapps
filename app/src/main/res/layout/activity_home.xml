@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:title="@string/app_name"
+        android:titleTextColor="@color/white"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/toolbar">
+        <ImageView
+            android:id="@+id/banner"
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/courses_lbl"
+        android:gravity="center_vertical"
+        android:textAlignment="gravity"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        android:textSize="20sp"
+        android:text="@string/trending_courses"
+        android:layout_below="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_courses"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/courses_lbl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</RelativeLayout>
