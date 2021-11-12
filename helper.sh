@@ -16,19 +16,15 @@ contents="$(jq -n \
    --arg v6 "$6" \
    --arg k7 'introsliders' \
    --arg v7 "$7" \
-   --arg k8 'site_base_url' \
-   --arg v8 "$8" \
-   '. | .[$k1]=$v1 | .[$k2]=$v2 | .[$k3]=$v3 | .[$k4]=$v4 | .[$k5]=$v5| .[$k6]=$v6| .[$k7]=$v7| .[$k8]=$v8' \
+   '. | .[$k1]=$v1 | .[$k2]=$v2 | .[$k3]=$v3 | .[$k4]=$v4 | .[$k5]=$v5| .[$k6]=$v6| .[$k7]=$v7' \
    <<<'{}'
 )"
 rm app/flavours/flavourfiles.json
 rm marketPlace/flavours/flavourfiles.json
-rm crossselling/flavours/flavourfiles.json
 
 echo "$contents"
 echo "$contents"| jq -n '.flavours |= [inputs]'> app/flavours/flavourfiles.json
 echo "$contents"| jq -n '.flavours |= [inputs]'> marketPlace/flavours/flavourfiles.json
-echo "$contents"| jq -n '.flavours |= [inputs]'> crossselling/flavours/flavourfiles.json
 
 # Asset generation
 # Prerequistes for the below is a gm binary.
